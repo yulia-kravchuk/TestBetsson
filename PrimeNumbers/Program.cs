@@ -10,7 +10,7 @@ namespace PrimeNumbers
             int a = ReadInput();
             Console.Write("Input B: ");
             int b = ReadInput();          
-            Console.WriteLine("\nThere are {0} prime numbers in the given interval.\n\nPress any key to quit...", CalculatePrimes(a, b).ToString());
+            Console.WriteLine("\nThere are {0} prime numbers in the given interval.\n\nPress any key to quit...", CountPrimes(a, b).ToString());
             Console.ReadKey();
         }
 
@@ -73,7 +73,7 @@ namespace PrimeNumbers
         /// <param name="b">Right range end</param>
         /// <param name="printPrimeNumbers">Switch on printing prime numbers in the given range</param>
         /// <returns>Number of prime numbers within the range</returns>
-        private static int CalculatePrimes(int a, int b, bool printPrimeNumbers = true)
+        private static int CountPrimes(int a, int b, bool printPrimeNumbers = true)
         {
             if ((a > b) || (b <= 1))
             {
